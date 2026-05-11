@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ### 2. Run the Backend
 ```bash
-uvicorn backend.main:app -reload
+uvicorn backend.main:app
 ```
 
 The API will be available at `http://127.0.0.1:8000`.

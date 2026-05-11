@@ -26,7 +26,6 @@ with tab1:
     col_input, col_image, col_results = st.columns([1, 1, 1.2], gap="medium")
 
     with col_input:
-        st.info("Step 1: Upload Image")
         uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 
         if uploaded_file:
@@ -43,7 +42,6 @@ with tab1:
             analyze_button = False
 
     with col_image:
-        st.info("Step 2: Preview")
         if uploaded_file:
             image = Image.open(uploaded_file)
             st.image(image, caption="Source Image", width="stretch")
@@ -51,8 +49,6 @@ with tab1:
             st.markdown("*Waiting for upload...*")
 
     with col_results:
-        st.info("Step 3: Analysis Results")
-
         if uploaded_file and analyze_button:
             with st.spinner('Running inference on all models...'):
                 try:
